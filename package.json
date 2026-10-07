@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server -p 3000",
-    "test": "echo \"No tests implemented yet\" && exit 0"
+    "test": "jest --runInBand"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/ZinoFlo/master#readme",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "jest": "^30.5.2"
   },
   "//SentinelOverrides": "Pin follow-redirects to 1.16.0 to mitigate GHSA-r4q5-vmmm-2653 / CVE-2025-24357 and qs to 6.15.3 to mitigate GHSA-q8mj-m7cp-5q26",
   "overrides": {

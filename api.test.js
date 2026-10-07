@@ -39,4 +39,13 @@ describe('Jules API Integration', () => {
       })
     );
   });
+
+  test('module can be imported without Office runtime', () => {
+    expect(() => require('./index.js')).not.toThrow();
+    const moduleExports = require('./index.js');
+    expect(moduleExports).toEqual(expect.objectContaining({
+      getAuthToken: expect.any(Function),
+      fetchSources: expect.any(Function)
+    }));
+  });
 });
